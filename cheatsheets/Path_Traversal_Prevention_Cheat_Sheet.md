@@ -4,7 +4,7 @@
 
 Path traversal happens when an application builds a file system path from user input and the input can make that path point outside the directory the application meant to use. Sequences such as `../`, absolute paths, or symbolic links let an attacker read, write or include files such as configuration, credentials or source code ([CWE-22](https://cwe.mitre.org/data/definitions/22.html)).
 
-This cheat sheet covers how to build file paths from untrusted input safely. For storing uploaded files, see the [File Upload Cheat Sheet](File_Upload_Cheat_Sheet.md). For testing, see [WSTG-ATHZ-01 Testing Directory Traversal File Include](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/05-Authorization_Testing/01-Testing_Directory_Traversal_File_Include).
+This cheat sheet covers how to build file paths from untrusted input safely. For storing uploaded files, see the [File Upload Cheat Sheet](File_Upload_Cheat_Sheet.md). For testing, see [WSTG-ATHZ-01 Testing Directory Traversal File Include](https://wstg.owasp.org/v4.2/4-Web_Application_Security_Testing/05-Authorization_Testing/01-Testing_Directory_Traversal_File_Include/).
 
 ## Avoid User Input in File Paths
 
@@ -121,5 +121,5 @@ Passing user input to `include`, `require`, template loaders or similar function
 ## References
 
 - [CWE-22: Improper Limitation of a Pathname to a Restricted Directory](https://cwe.mitre.org/data/definitions/22.html)
-- [OWASP WSTG-ATHZ-01 Testing Directory Traversal File Include](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/05-Authorization_Testing/01-Testing_Directory_Traversal_File_Include)
+- [OWASP WSTG-ATHZ-01 Testing Directory Traversal File Include](https://wstg.owasp.org/v4.2/4-Web_Application_Security_Testing/05-Authorization_Testing/01-Testing_Directory_Traversal_File_Include/)
 - [Microsoft: Naming Files, Paths, and Namespaces](https://learn.microsoft.com/en-us/windows/win32/fileio/naming-a-file)

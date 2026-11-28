@@ -21,7 +21,7 @@ Most of these controls live in the proxy, load balancer or HTTP server rather th
 
 ### Use HTTP/2 End-to-End
 
-Where the front end and the back end both support it, use HTTP/2 between them as well as towards clients, and turn off downgrading to HTTP/1.1. HTTP/2 determines the length of a request from its frames, so there is no second length to disagree about ([PortSwigger: How to prevent HTTP request smuggling](https://portswigger.net/web-security/request-smuggling#how-to-prevent-http-request-smuggling-vulnerabilities)).
+Where the front end and the back end both support it, use HTTP/2 between them as well as towards clients, and turn off downgrading to HTTP/1.1. HTTP/2 uses frames rather than `Content-Length` or `Transfer-Encoding` to delimit requests ([PortSwigger: How to prevent HTTP request smuggling](https://portswigger.net/web-security/request-smuggling#how-to-prevent-http-request-smuggling-vulnerabilities)). Still validate any `content-length` value as described below, and apply the HTTP/1.1 framing rules on any remaining HTTP/1.1 hops.
 
 ### Reject Ambiguous HTTP/1.1 Framing
 
